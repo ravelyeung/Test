@@ -1,9 +1,4 @@
----
-title: "<center>Reproducible Research: Peer Assignment 1</center>"
-output: 
-  html_document: 
-    keep_md: yes
----
+# <center>Reproducible Research: Peer Assignment 1</center>
 
 ### Data
 The data for this assignment [activity monitoring data](https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip), and the variables included in the dataset are:
@@ -60,7 +55,7 @@ g <- g + geom_line(data = steps_data_total, aes(x=date, y=steps), size = 0.8, co
 g
 ```
 
-![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3-1.png) 
+![](PA1_template_files/figure-html/unnamed-chunk-3-1.png) 
 
 #### 3. Calculate and report the mean and median of the total number of steps: taken per day
 
@@ -94,7 +89,7 @@ g <- g + ggtitle("Figure 2: Time Series Plot of the 5-minute Interval")
 g
 ```
 
-![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5-1.png) 
+![](PA1_template_files/figure-html/unnamed-chunk-5-1.png) 
   
 #### 2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
@@ -155,7 +150,7 @@ g <- g + geom_line(data = steps_data_total_2, aes(x=date, y=steps), size = 0.8, 
 g
 ```
 
-![plot of chunk unnamed-chunk-9](figure/unnamed-chunk-9-1.png) 
+![](PA1_template_files/figure-html/unnamed-chunk-9-1.png) 
   
 #### 4-2. Do these values differ from the estimates from the first part of the assignment? What is the impact of imputing missing data on the estimates of the total daily number of steps?
 
@@ -198,4 +193,4 @@ steps_data_mean_2 <- aggregate(x = list(steps = data_clean_2$steps), by = list(i
 xyplot(steps_data_mean_2$steps ~ steps_data_mean_2$interval | steps_data_mean_2$weekday, layout = c(1, 2), type = "l", xlab = "5-minute interval", ylab = "Average Steps", main = "Figure 4: Time Series Plot of the 5-minute Interval (seperated by weekday)")
 ```
 
-![plot of chunk unnamed-chunk-12](figure/unnamed-chunk-12-1.png) 
+![](PA1_template_files/figure-html/unnamed-chunk-12-1.png) 
